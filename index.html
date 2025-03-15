@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">LearnHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary ms-2" href="#login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Learn From The Best</h1>
+                    <p class="lead mb-4">Discover top-quality courses taught by industry experts and advance your career with hands-on learning experiences.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#courses" class="btn btn-primary btn-lg">Explore Courses</a>
+                        <a href="#quiz" class="btn btn-outline-primary btn-lg">Take Quiz</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image-container">
+                        <img src="images/hero-image.jpg" alt="Learning Online" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section id="courses" class="courses-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Courses</h2>
+            <div class="row">
+                <!-- Course Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="images/web-dev.jpg" class="card-img-top" alt="Web Development">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development Fundamentals</h5>
+                            <p class="card-text">Learn HTML, CSS, and JavaScript to build modern websites.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$49.99</span>
+                                <button class="btn btn-primary" onclick="enrollCourse(1)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="images/digital-marketing.jpg" class="card-img-top" alt="Digital Marketing">
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Marketing Mastery</h5>
+                            <p class="card-text">Master SEO, social media, and content marketing strategies.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$59.99</span>
+                                <button class="btn btn-primary" onclick="enrollCourse(2)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="images/data-science.jpg" class="card-img-top" alt="Data Science">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Science Essentials</h5>
+                            <p class="card-text">Learn data analysis, visualization, and machine learning.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$69.99</span>
+                                <button class="btn btn-primary" onclick="enrollCourse(3)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="images/ai-ml.jpg" class="card-img-top" alt="AI & Machine Learning">
+                        <div class="card-body">
+                            <h5 class="card-title">AI & Machine Learning</h5>
+                            <p class="card-text">Deep dive into artificial intelligence and machine learning algorithms.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$79.99</span>
+                                <button class="btn btn-primary" onclick="enrollCourse(4)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="images/social-media.jpg" class="card-img-top" alt="Social Media Marketing">
+                        <div class="card-body">
+                            <h5 class="card-title">Social Media Marketing</h5>
+                            <p class="card-text">Create effective social media strategies and campaigns.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$54.99</span>
+                                <button class="btn btn-primary" onclick="enrollCourse(5)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="images/cyber-security.jpg" class="card-img-top" alt="Cyber Security">
+                        <div class="card-body">
+                            <h5 class="card-title">Cyber Security Fundamentals</h5>
+                            <p class="card-text">Learn network security, ethical hacking, and security best practices.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$74.99</span>
+                                <button class="btn btn-primary" onclick="enrollCourse(6)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 7 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="images/mobile-dev.jpg" class="card-img-top" alt="Mobile App Development">
+                        <div class="card-body">
+                            <h5 class="card-title">Mobile App Development</h5>
+                            <p class="card-text">Build iOS and Android apps using React Native.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$64.99</span>
+                                <button class="btn btn-primary" onclick="enrollCourse(7)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 8 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="images/seo.jpg" class="card-img-top" alt="SEO Mastery">
+                        <div class="card-body">
+                            <h5 class="card-title">SEO Mastery Course</h5>
+                            <p class="card-text">Master search engine optimization techniques and strategies.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$49.99</span>
+                                <button class="btn btn-primary" onclick="enrollCourse(8)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 9 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="images/cloud-computing.jpg" class="card-img-top" alt="Cloud Computing">
+                        <div class="card-body">
+                            <h5 class="card-title">Cloud Computing</h5>
+                            <p class="card-text">Learn AWS, Azure, and Google Cloud platforms.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$69.99</span>
+                                <button class="btn btn-primary" onclick="enrollCourse(9)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 10 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="images/content-marketing.jpg" class="card-img-top" alt="Content Marketing">
+                        <div class="card-body">
+                            <h5 class="card-title">Content Marketing Strategy</h5>
+                            <p class="card-text">Create engaging content and effective marketing strategies.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$54.99</span>
+                                <button class="btn btn-primary" onclick="enrollCourse(10)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 11 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="images/blockchain.jpg" class="card-img-top" alt="Blockchain">
+                        <div class="card-body">
+                            <h5 class="card-title">Blockchain Development</h5>
+                            <p class="card-text">Learn blockchain technology and smart contract development.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$79.99</span>
+                                <button class="btn btn-primary" onclick="enrollCourse(11)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course Card 12 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card">
+                        <img src="images/ui-ux.jpg" class="card-img-top" alt="UI/UX Design">
+                        <div class="card-body">
+                            <h5 class="card-title">UI/UX Design</h5>
+                            <p class="card-text">Master user interface and user experience design principles.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$64.99</span>
+                                <button class="btn btn-primary" onclick="enrollCourse(12)">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose Us</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="feature-box">
+                        <i class="fas fa-laptop-code fa-3x mb-3"></i>
+                        <h3>Learn Online</h3>
+                        <p>Access courses anytime, anywhere at your convenience.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-box">
+                        <i class="fas fa-certificate fa-3x mb-3"></i>
+                        <h3>Get Certified</h3>
+                        <p>Earn certificates upon successful course completion.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-box">
+                        <i class="fas fa-users fa-3x mb-3"></i>
+                        <h3>Expert Teachers</h3>
+                        <p>Learn from industry professionals and experts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Find Your Perfect Course</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="quiz-container">
+                                <div id="start-quiz" class="text-center">
+                                    <p class="lead">Take our quick assessment to find the perfect course for you!</p>
+                                    <button class="btn btn-primary btn-lg" onclick="startQuiz()">Start Quiz</button>
+                                </div>
+                                <div id="quiz-questions" style="display: none;">
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                                    </div>
+                                    <h4 id="question-text"></h4>
+                                    <div id="options-container" class="mt-4"></div>
+                                </div>
+                                <div id="quiz-results" style="display: none;">
+                                    <h3 class="text-center mb-4">Your Recommended Path</h3>
+                                    <div id="results-content"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chatbot-header" onclick="toggleChatbot()">
+            <i class="fas fa-robot"></i> Course Assistant
+            <button class="chatbot-toggle"><i class="fas fa-chevron-up"></i></button>
+        </div>
+        <div class="chatbot-body">
+            <div id="chat-messages" class="chat-messages">
+                <div class="bot-message">
+                    Hello! I'm your course assistant. How can I help you find the perfect course?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form id="contactForm" onsubmit="return handleSubmit(event)">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About LearnHub</h5>
+                    <p>Providing quality education to everyone, everywhere.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Enrollment Modal -->
+    <div class="modal fade" id="enrollmentModal" tabindex="-1" aria-labelledby="enrollmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="enrollmentModalLabel">Course Enrollment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="course-details">
+                                <img id="modal-course-image" src="" alt="" class="img-fluid mb-3 rounded">
+                                <h4 id="modal-course-title"></h4>
+                                <p id="modal-course-description" class="text-muted"></p>
+                                <div class="course-info">
+                                    <div class="info-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span id="modal-course-duration"></span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-calendar-check"></i>
+                                        <span id="modal-completion-time"></span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-certificate"></i>
+                                        <span>Certificate Included</span>
+                                    </div>
+                                </div>
+                                <div class="course-price mt-3">
+                                    <h5>Price: <span id="modal-course-price"></span></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="payment-section">
+                                <h5 class="mb-4">Payment Details</h5>
+                                <form id="payment-form">
+                                    <div class="mb-3">
+                                        <label class="form-label">Card Number</label>
+                                        <input type="text" class="form-control" placeholder="1234 5678 9012 3456" required>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Expiry Date</label>
+                                            <input type="text" class="form-control" placeholder="MM/YY" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">CVV</label>
+                                            <input type="text" class="form-control" placeholder="123" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Name on Card</label>
+                                        <input type="text" class="form-control" placeholder="John Doe" required>
+                                    </div>
+                                    <div class="payment-methods mb-3">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visa/visa-original.svg" alt="Visa">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mastercard/mastercard-original.svg" alt="Mastercard">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/paypal/paypal-original.svg" alt="PayPal">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Complete Enrollment</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+    .hero-section {
+        padding: 120px 0 80px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    .hero-section h1 {
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-section .lead {
+        color: #6c757d;
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-image-container {
+        position: relative;
+        padding: 1rem;
+    }
+
+    .hero-image-container:before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        bottom: 15px;
+        left: 15px;
+        border: 2px solid #007bff;
+        border-radius: 0.5rem;
+        z-index: -1;
+    }
+
+    .hero-image-container img {
+        border-radius: 0.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .hero-image-container img:hover {
+        transform: translate(-5px, -5px);
+    }
+
+    .course-info {
+        margin: 20px 0;
+    }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        color: #6c757d;
+    }
+
+    .info-item i {
+        margin-right: 10px;
+        color: #007bff;
+    }
+
+    .payment-methods {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .payment-methods img {
+        height: 30px;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+
+    .payment-methods img:hover {
+        opacity: 1;
+    }
+
+    .modal-content {
+        border: none;
+        border-radius: 1rem;
+    }
+
+    .modal-header {
+        background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+        color: white;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .modal-header .btn-close {
+        filter: brightness(0) invert(1);
+    }
+
+    .course-details {
+        padding: 15px;
+    }
+
+    .payment-section {
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 1rem;
+    }
+    </style>
+</body>
+</html> 
